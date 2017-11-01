@@ -1,0 +1,148 @@
+@font-face {
+    font-family: bangna;
+    src: url('../font/Bangna-New.ttf');
+}
+
+/* Style for our header texts
+* --------------------------------------- */
+
+h1 {
+    font-size: 5em;
+    font-family: 'bangna', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Centered texts in each section
+* ------------------------------ */
+
+/* Backgrounds will cover all the section
+* --------------------------------------- */
+
+.section {
+    background-size: cover;
+}
+
+.slide {
+    background-size: cover;
+}
+
+.event-padding {
+    padding-top: 40px;
+}
+
+.contact-padding {
+    padding-top: 40px;
+}
+
+1 padding-top: 20px;
+
+102.1. 23.30222.10 .0122012x;
+}
+
+.logo-padding {
+    padding-top: 80px;
+}
+
+.qa-padding {
+    padding-top: 80px;
+}
+
+.detail-content-color {
+    background-color: #dfeef2;
+    padding-bottom: 200px;
+    border-radius: 35px;
+    margin-top: 30px;
+}
+
+.event-content-color {
+    background-color: rgb(255, 215, 217);
+    padding-bottom: 400px;
+    margin-top: 30px;
+    border-radius: 35px;
+
+}
+
+.qa-content-color {
+    background-color: #e1e7fa;
+    padding-bottom: 400px;
+    margin-top: 50px;
+    border-radius: 35px;
+
+
+}
+
+.contact-content-color {
+    background-color: #f8ecf8;
+    padding-bottom: 250px;
+    margin-top: 50px;
+    border-radius: 35px;
+
+}
+
+
+
+
+/* Defining each section background and styles
+* --------------------------------------- */
+
+#section0 {
+    background-image: url(../imgs/B2.jpg);
+}
+
+#section0 h1 {
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+    color: inherit;
+}
+
+#section0 h2 {
+    color: #FB7F86;
+}
+
+#section1 {
+    background-color: #C2E3Ec;
+    padding: 6% 0 0 0;
+
+}
+
+#section2 {
+    background-color: #FB7F86;
+    padding: 6% 0 0 0;
+}
+
+#section3 {
+    background-color: #B8C8FD;
+    padding: 6% 0 0 0;
+}
+
+#section4 {
+    background-color: #D9C7D9;
+    padding: 6% 0 0 0;
+}
+
+
+/*Adding background for the slides
+* --------------------------------------- */
+
+#slide1 {
+    background-color: #B8C8FD;
+    padding: 6% 0 0 0;
+}
+
+#slide2 {
+    background-image: url(imgs/bg5.jpg);
+    padding: 6% 0 0 0;
+}
+
+
+/* Bottom menu
+* --------------------------------------- */
+
+#infoMenu li a {
+    color: #FFF;
+}
