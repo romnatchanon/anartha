@@ -2,6 +2,10 @@
     font-family: bangna;
     src: url('../font/Bangna-New.ttf');
 }
+@font-face{
+    font-family : FontDek;
+    src: url('../font/SanamDeklen_chaya.ttf');
+}
 
 /* Style for our header texts
 * --------------------------------------- */
@@ -31,7 +35,7 @@ h1 {
 }
 
 .event-padding {
-    padding-top: 40px;
+    padding: 40px;
 }
 
 .contact-padding {
@@ -55,13 +59,13 @@ h1 {
     background-color: #dfeef2;
     padding-bottom: 200px;
     border-radius: 35px;
-    margin-top: 30px;
+    margin-top: 70px;
 }
 
 .event-content-color {
     background-color: rgb(255, 215, 217);
     padding-bottom: 400px;
-    margin-top: 30px;
+    margin-top: 60px;
     border-radius: 35px;
 
 }
@@ -69,7 +73,8 @@ h1 {
 .qa-content-color {
     background-color: #e1e7fa;
     padding-bottom: 400px;
-    margin-top: 30px;
+    padding-top: 30px;
+    margin-top: 70px;
     border-radius: 35px;
 
 
@@ -99,7 +104,11 @@ h1 {
     position: relative;
     color: inherit;
 }
+#section0 h1.dekren {
 
+    font-family: 'FontDek';
+    line-height: 150px;
+}
 #section0 h2 {
     color: #FB7F86;
 }
@@ -145,4 +154,25 @@ h1 {
 
 #infoMenu li a {
     color: #FFF;
+}
+
+/* Override FullpageJS Nav */
+#fp-nav ul li, .fp-slidesNav ul li{
+    border-radius: 50%;
+    border: 4px solid white;
+}
+.dek{
+    font-family: FontDek;
+    
+}
+
+.contact-box {
+    margin-bottom: 30px;
+}
+.contact-box > a > img {
+    margin-bottom: 10px;
+}
+.contact-line {
+    border-top: 2px solid #D9C7D9; 
+    margin-top: 33px;
 }

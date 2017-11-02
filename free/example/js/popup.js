@@ -67,11 +67,21 @@ function Detail8() {
 }
 
 function Egg1() {
-    swal("Science", "...and here's the text!");
+    swal({
+        title: "Activity",
+        text: "Game for the brain",
+        content: {
+            element: "img",
+            attributes: {
+                src: "imgs/GameFirst.png",
+                className: "img-responsive"
+            }
+        },
+    });
 }
 
 function Egg2() {
-    swal("Science", "...and here's the text!");
+    $.fn.fullpage.moveSectionDown();
 }
 
 function Login() {
