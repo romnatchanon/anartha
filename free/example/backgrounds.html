@@ -9,8 +9,6 @@
     <meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,backgrounds,full-screen" />
     <meta name="Resource-type" content="Document" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="css/examples.css" />
@@ -19,38 +17,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/beautiful.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
-    <script type="text/javascript" src="js/examples.js"></script>
-    <script type="text/javascript" src="js/popup.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#fullpage').fullpage({
-                verticalCentered: false,
-                menu: '#menu',
-                lockAnchors: true,
-                anchors:['firstPage', 'secondPage'],
-                navigation: true,
-                navigationPosition: 'right',
-                navigationTooltips: ['Home', 'Detail','Event','FAQs','Contact'],
-                showActiveTooltip: false,
-                slidesNavigation: false,
-                slidesNavPosition: 'bottom',
-            });
-        });
-
-    </script>
-
+    
     <!--join popup-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.11.2/sweetalert2.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    
+    <style>
+        a:hover, a:active, a:focus {
+            text-decoration: none;
+        }
+        #myNavbar ul li a {
+            color: #000000;
+            font-size: 20px;
+        }
+    </style>
 </head>
+    
+    
 
 <body>
     <nav class="navbar navbar-fixed-top">
@@ -58,8 +42,8 @@
 
             <div class="collapse navbar-collapse" id="myNavbar">
 
-                <ul class="nav navbar-nav navbar-right navbar-inve " onclick="Login();">
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <ul class="nav navbar-nav navbar-right navbar-inve login" onclick="Login();">
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Login</a></li>
                 </ul>
             </div>
         </div>
@@ -72,30 +56,30 @@
                 <div class="row">
                     <div class="col-md-6">
                         <img class="img-left" src="imgs/c1.png" width="600px" />
-                    </div>
-                    <div class="col-md-6">
-                        <h1>คุณพอจะมี<br/>
+                    </div><br>
+                    <div class="col-md-6 dek">
+                        <h1 class="dekren">คุณพอจะมี<br/>
                             <font color="#ff5d66" style="font-size:120px">"เวลาว่าง"</font><br/>สักแปปไหม?</h1>
                     </div>
+                    <div class="col-md-12" style="margin-top: -50px;"><p style="cursor: pointer" onclick="$.fn.fullpage.moveSectionDown();"><i class="animated infinite bounce glyphicon glyphicon-circle-arrow-down" style="font-size: 30px;"></i></button></div>
                 </div>
-
-                <p><i class="animated infinite bounce glyphicon glyphicon-circle-arrow-down"></i></p>
             </div>
 
         </div>
 
         <!--detail page-->
         <div class="section" id="section1">
-
             <h1>Detail | รายละเอียด</h1>
-            <font style="font-size:30px" face="bangna">คุณ</font>
-            <font color="#ff8188" style="font-size:50px" face="bangna">"อยากหาไรทำ"</font>
-            <font style="font-size:30px" face="bangna">ใช่หรือไม่?</font>
-
             <div class="container detail-content-color">
                 <div class="row">
-                    <div class="col-md-6"><img src="imgs/button1.png" width="450px" onclick="Egg1();" /><br/></div>
-                    <div class="col-md-6"><img src="imgs/button2.png" width="400px" onclick="Egg2();" /></div>
+                    <div class="col-md-12" style="padding-top: 30px;">
+                        <font style="font-size:30px" face="bangna">คุณ</font>
+                        <font color="#ff8188" style="font-size:50px" face="bangna">"อยากหาไรทำ"</font>
+                        <font style="font-size:30px" face="bangna">หรือเปล่า ?</font>
+                    </div>
+                    
+                    <div class="col-md-6"><img src="imgs/button1.png" width="450px" onclick="Egg1();" style="cursor: pointer" /><br/></div>
+                    <div class="col-md-6"><img src="imgs/button2.png" width="400px" onclick="Egg2();" style="cursor: pointer" /></div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -220,21 +204,17 @@
                     <h1>FAQs ? คำถาม</h1>
                 </font>
             </center>
-            <div class="container qa-padding ">
+            <div class="container qa-content-color" style="padding-bottom: 0px;">
                 <div class="row">
-
-                    <font face="bangna" style="font-size: 25px">
-                        <div class="col-md-2">
-
-                        </div>
-                        <div class="col-md-5">
-                            <div id="faq" role="tablist" aria-multiselectable="true">
+                    <div class="col-md-5 col-md-offset-2">
+                        <font face="bangna" style="font-size: 25px">
+                            <div id="faq" role="tablist" aria-multiselectable="true" style="padding-top: 45px;">
 
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="questionOne">
 
                                         <h5 align='left' class="panel-title">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerOne" aria-expanded="false" aria-controls="answerOne"><i class="fa fa-question-circle" style="font-size:27px;color:skyblue"></i><b><font color="#bdd2e2" style="font-size: 25px" face="bangna"> :</font>  กิจกรรมมีค่าใช้จ่ายมั้ยค้าบบ?</b></a>
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerOne" aria-expanded="false" aria-controls="answerOne"><i class="fa fa-question-circle" style="font-size:27px;color:skyblue"></i><b><font color="#bdd2e2" style="font-size: 25px" face="bangna"> :</font>  กิจกรรมมีค่าใช้จ่ายมั้ยค้าบ ?</b></a>
                                         </h5>
                                     </div>
                                     <div id="answerOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="questionOne">
@@ -249,7 +229,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="questionTwo">
                                         <h5 align='left' class="panel-title">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerTwo" aria-expanded="false" aria-controls="answerTwo"><i class="fa fa-question-circle" style="font-size:27px;color:skyblue"></i><b><font color="#bdd2e2" style="font-size: 25px" face="bangna"> :</font> กิจกรรมนี้จัดที่ไหนครับ?</b></a>
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerTwo" aria-expanded="false" aria-controls="answerTwo"><i class="fa fa-question-circle" style="font-size:27px;color:skyblue"></i><b><font color="#bdd2e2" style="font-size: 25px" face="bangna"> :</font> กิจกรรมนี้จัดที่ไหนครับ ?</b></a>
                                         </h5>
                                     </div>
                                     <div id="answerTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="questionTwo">
@@ -264,7 +244,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="questionThree">
                                         <h5 align='left' class="panel-title">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerThree" aria-expanded="false" aria-controls="answerThree"><i class="fa fa-question-circle" style="font-size:27px;color:skyblue"></i><b><font color="#bdd2e2" style="font-size: 25px" face="bangna"> :</font> พี่ๆที่ดูแลน่ารักมั้ยคะ></b></a>
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerThree" aria-expanded="false" aria-controls="answerThree"><i class="fa fa-question-circle" style="font-size:27px;color:skyblue"></i><b><font color="#bdd2e2" style="font-size: 25px" face="bangna"> :</font> พี่ๆที่ดูแลน่ารักมั้ยคะ ?</b></a>
                                         </h5>
                                     </div>
                                     <div id="answerThree" class="panel-collapse collapse " role="tabpanel" aria-labelledby="questionThree">
@@ -279,7 +259,7 @@
                                 <div class="panel panel-default">
                                     <div class="panel-heading" role="tab" id="questionThree">
                                         <h5 align='left' class="panel-title">
-                                            <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerFour" aria-expanded="false" aria-controls="answerFour"><i class="fa fa-question-circle" style="font-size:27px;color:skyblue"></i><b><font color="#bdd2e2" style="font-size: 25px" face="bangna"> :</font> ผมจะได้อะไรจากการทำกิจกรรมพวกนี้ครับ?</b></a>
+                                            <a class="collapsed" data-toggle="collapse" data-parent="#faq" href="#answerFour" aria-expanded="false" aria-controls="answerFour"><i class="fa fa-question-circle" style="font-size:27px;color:skyblue"></i><b><font color="#bdd2e2" style="font-size: 25px" face="bangna"> :</font> ผมจะได้อะไรจากการทำกิจกรรมพวกนี้ครับ ?</b></a>
                                         </h5>
                                     </div>
                                     <div id="answerFour" class="panel-collapse collapse " role="tabpanel" aria-labelledby="questionFour">
@@ -292,24 +272,19 @@
                                 </div>
 
                             </div>
-                        </div>
-                        <div class="col-md-4">
-                            <img src="imgs/button3.png" width="100%">
-                        </div>
-
-                    </font>
-                    <div class="col-md-2">
+                        </font>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="imgs/button3.png" width="100%">
                     </div>
                 </div>
-                <div class="container qa-content-color">
-                    <div class="row ">
-
-                        <div class="col-md-4 logo-padding "><a href="http://www.kmuttdemo.com" target="_blank"><img src="imgs/logo-kmutt.png" height="85px"/></a></div>
-                        <div class="col-md-4 logo-padding "><a href="https://helloworld.itbangmod.in.th" target="_blank"><img src="imgs/logo.png" height="85px"/></a></div>
-                        <div class="col-md-4 logo-padding"><a href="https://www-demo.sit.kmutt.ac.th" target="_blank"><img src="imgs/sit.gif" height="85px"/></a></div>
-
-
-                    </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="container">
+                <div class="row" style="padding-top: 50px;">
+                    <div class="col-md-4 logo-padding "><a href="http://www.kmuttdemo.com" target="_blank"><img src="imgs/logo-kmutt.png" height="85px"/></a></div>
+                    <div class="col-md-4 logo-padding "><a href="https://helloworld.itbangmod.in.th" target="_blank"><img src="imgs/logo.png" height="85px"/></a></div>
+                    <div class="col-md-4 logo-padding"><a href="https://www-demo.sit.kmutt.ac.th" target="_blank"><img src="imgs/sit.gif" height="85px"/></a></div>
                 </div>
             </div>
         </div>
@@ -328,16 +303,84 @@
 
             <div class="container contact-padding contact-content-color">
                 <div class="row">
-                    <div class="col-sm-4"><a href="https://www.facebook.com/pcr.mixkungz" target="_blank"><img src="imgs/mix.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Mix #HelloFrontEnd</font></a></div>
-                    <div class="col-sm-4"><a href="https://www.facebook.com/phonglyskies?fref=pb&hc_location=profile_browser" target="_blank"><img src="imgs/phong.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Phong #HelloDesign</font></a></div>
-                    <div class="col-sm-4"><a href="https://www.facebook.com/fluke.n.bigroo?fref=nf" target="_blank"><img src="imgs/fluck.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Fluke #HelloDesign</font></a></div>
-                    <div class="col-sm-4"><a href="https://www.facebook.com/natchanon.niwedtongrirk?fref=pb&hc_location=profile_browser" target="_blank"><img src="imgs/rom.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Rom #HelloFrontEnd</font></a></div>
-                    <div class="col-sm-4"><a href="https://www.facebook.com/thanutchamew?fref=pb&hc_location=profile_browser" target="_blank"><img src="imgs/mew.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Mew #HelloFrontEnd</font></a></div>
-                    <div class="col-sm-4"><a href="https://www.facebook.com/Krittapak.url?fref=pb&hc_location=profile_browser" target="_blank"><img src="imgs/mos.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Moz #HelloFrontEnd</font></a></div>
-
+                    <div class="col-sm-4">
+                        <div class="contact-box">
+                            <a href="https://www.facebook.com/pcr.mixkungz" target="_blank"><img src="imgs/mix.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Mix #HelloFrontEnd</font></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="contact-box">
+                            <a href="https://www.facebook.com/phonglyskies?fref=pb&hc_location=profile_browser" target="_blank"><img src="imgs/phong.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Phong #HelloDesign</font></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="contact-box">
+                            <a href="https://www.facebook.com/fluke.n.bigroo?fref=nf" target="_blank"><img src="imgs/fluck.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Fluke #HelloDesign</font></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="contact-box">
+                            <a href="https://www.facebook.com/natchanon.niwedtongrirk?fref=pb&hc_location=profile_browser" target="_blank"><img src="imgs/rom.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Rom #HelloFrontEnd</font></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="contact-box">
+                            <a href="https://www.facebook.com/thanutchamew?fref=pb&hc_location=profile_browser" target="_blank"><img src="imgs/mew.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Mew #HelloFrontEnd</font></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="contact-box">
+                            <a href="https://www.facebook.com/Krittapak.url?fref=pb&hc_location=profile_browser" target="_blank"><img src="imgs/mos.jpg" class="img-circle img-padding" width="170px"/><br/><font style="font-size:20px" face="bangna">Moz #HelloFrontEnd</font></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4 col-sm-offset-1">
+                        <hr class="contact-line">
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="row">
+                            <div class="col-sm-offset-3 col-sm-6">
+                                <img class="img-responsive" src="imgs/c1.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <hr class="contact-line">
+                    </div>
                 </div>
             </div>
         </div>
+        
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/examples.js"></script>
+    <script type="text/javascript" src="js/popup.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                verticalCentered: false,
+                menu: '#menu',
+                lockAnchors: true,
+                anchors:['firstPage', 'secondPage'],
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Home', 'Detail','Event','FAQs','Contact'],
+                showActiveTooltip: false,
+                slidesNavigation: false,
+                slidesNavPosition: 'bottom',
+            });
+        });
+    </script>
+
 </body>
 
 </html>
