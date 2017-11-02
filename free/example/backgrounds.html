@@ -30,7 +30,16 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                verticalCentered: false
+                verticalCentered: false,
+                menu: '#menu',
+                lockAnchors: true,
+                anchors:['firstPage', 'secondPage'],
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Home', 'Detail','Event','FAQs','Contact'],
+                showActiveTooltip: false,
+                slidesNavigation: false,
+                slidesNavPosition: 'bottom',
             });
         });
 

@@ -146,3 +146,9 @@ h1 {
 #infoMenu li a {
     color: #FFF;
 }
+
+/* Override FullpageJS Nav */
+#fp-nav ul li, .fp-slidesNav ul li{
+    border-radius: 50%;
+    border: 4px solid white;
+}
